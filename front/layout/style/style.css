@@ -1,0 +1,806 @@
+body{
+    font-family: Snell Roundhand, cursive;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+  }
+  /*Header------------------------------------------------------- */
+  .header {
+    padding: 1px 2.7px 1px 5px;
+    background: #000;
+    color: #f1f1f1;
+    font-size: 28px;
+    text-align: center;
+    font-family: arial;
+    cursor: pointer;
+    font-weight: bold; 
+    
+  }
+  /* buttons */
+  .btn-group button {
+    background-color: #000001;
+    border: none;
+    color: white;
+    cursor: pointer; 
+    float: left; /* Float the buttons side by side */ 
+    margin-bottom: 0px;
+  }
+  
+  .btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+  }
+  
+  /* Clear floats (clearfix hack) */
+  .btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Add a background color on hover */
+  .btn-group button:hover{
+    background-color: white;
+    color: black;
+  }
+    
+
+  /*top navigation bar */
+  /* Add a black background color to the top navigation bar */
+  .topnav {
+    overflow: hidden;
+    background-color: black;
+    font-family: arial;
+    padding: 20px 6px 0px 2px;
+    margin-left: 50px;
+    margin-top: -70px;
+    display: flex; /* Adiciona flexbox para alinhar os itens verticalmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 10px; /* Adiciona espaçamento horizontal entre os itens */
+    padding: 8px 15px 0px 16px;
+    transition: 0.5s ease;
+  }
+  
+  
+  
+  /* Style the search box inside the navigation bar */
+  .topnav input[type=text] {
+    float: right;
+    padding: 8px 10px 3px 10px;
+    border: black;
+    margin-top: 3px;
+    margin-right: 23px;
+    font-size: 14px;
+    margin-bottom: 0px;
+  }
+  
+  
+  
+  /* header stuff: The logo part*/
+  #logobitch {
+    height: 160px;
+  }
+  
+  #home {
+    font-size: 46px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  
+  
+  /*header icons*/
+#bag,
+#cart-toggle,
+#acc {
+  margin-top: 0px;
+  padding-top: 3px;
+  transition: 0.5s ease;
+}
+
+#bag:hover,
+#cart-toggle:hover,
+#acc:hover {
+color: #9d9c9c;
+}
+
+  .cart-menu {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* ... outros estilos ... */
+  
+  .cart-menu.active {
+    display: block;
+  }
+  /* CONTEÚDO SUSPENSO, a cor de fundo está boa, o problema são os outros ícones*/
+  
+  ul {
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    background-color: #333333;
+  
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px 0px 16px;
+    text-decoration: none;
+    min-width: 197px;
+  
+  }
+  
+  li.dropdown {
+    display: inline-block;
+  
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:#f9f9f9;
+    min-width: 110px;
+    z-index: 1;
+    margin: 37px 0px 0px 0px;
+    background: rgba(254,254,254,0.6);
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 14px 12px; 
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    font-family: Geneva, Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  }
+  
+  .dropdown-content a:hover {
+    color: #505050;
+  
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  
+  }
+  
+  #btn1{
+      width: 215px;
+  
+  }
+  #btn2{
+    padding: 0px 0.5px;
+  }
+  #btn3{
+    padding: 0px 2.5px;
+  }
+  #btn4{
+    padding: 0px 7.8px;
+  }
+  #btn5{
+    width: 215px;
+  }
+  #btn6{
+    padding: 0px 4px;
+  }
+  
+  
+  
+  /* Style the buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #ddd;
+  }
+  
+  .btn.active {
+    background-color: #666;
+    color: white;
+  }
+  
+  
+  /* footer ------------------------------------------------------- */
+  @font-face {
+    font-family: 'Tiffany';
+    src: url('../fontes/Tiffany.ttf') format('truetype');
+  }
+  
+  .footer {
+    font-family: "Tiffany", sans-serif;
+    font-size: 17px;
+    margin: 0; /* Remova as margens */
+    padding: 10px 0; /* Mantenha apenas o padding vertical */
+    font-weight: 800;
+    letter-spacing: 5px;
+    text-decoration: none; /* Remova o sublinhado padrão dos links */
+    font-size: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Ocupar toda a largura */
+    z-index: 1000; /* Ajuste a ordem na qual o rodapé é exibido */
+  }
+  .footer-hover {
+    color: gray; /* Cor cinza */
+  }
+
+  .menu-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .menu-links a {
+    text-decoration: none;
+    color: #ffffff; /* Exemplo de cor do texto */
+  }
+  
+  @font-face {
+    font-family: 'Beauty';
+    src: url('../fontes/BeautyDemo.ttf') format('truetype');
+  }
+  
+
+  .footer-title {
+    font-family: "Beauty";
+    font-size: 80px;
+    margin: 10px;
+    font-weight: 250;
+    letter-spacing: 5px;
+  }
+  
+  /* Aplicando a fonte "Tiffany" às descrições das categorias */
+
+  .footer-title {
+    font-family: "Beauty";
+    src: url("beauty-font.woff") format("woff");
+    font-size: 80px;
+    margin: 10px;
+    font-weight: 250;
+    letter-spacing: 5px;
+  }
+  
+  #email {
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid white;
+    cursor: pointer;
+    font-family: Lucida Console, Arial;
+    padding: 4px;
+    margin-bottom: 47px;
+    position: relative;
+    bottom: 4px;
+  }
+  #email:hover{
+    background-color: #C3C2C2;
+    border-color: #C3C2C2;
+  }
+  
+  #newsletter{
+    font-family: arial black, sans-serif;
+    margin: 26px;
+    font-size: 23px;
+    padding: 6px;
+    padding-top: 40px;
+  
+  }
+  .form-inline {
+    font-family: arial;
+   font-size: 18px;
+    
+  }
+
+  #sml{
+    font-size: 15px;
+  }
+  
+  #newsletter input[type="text"], #name input[type="email"] {
+      border: none;
+      border-bottom: 1px solid #FFFFFF;
+      box-shadow: none;
+      margin: 5px 0;
+      color: white;
+      font-size: 16px;
+      background-color: black;
+  }
+  #em {
+      background-color: black;
+      border: none;
+      border-bottom: 1px solid #FFFFFF;
+      box-shadow: none;
+      margin: 5px 0;
+      color: white;
+      font-size: 16px;
+  
+  }
+  
+/* Estilo dos botões sociais */
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  text-decoration: none;
+  margin: 0 10px;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background: none; /* Remover fundo */
+  border: none; /* Remover borda */
+}
+
+.social-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Cor da borda escura */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+  
+  /* slidesss ----------------------------------------------------------*/
+  .mySlides {
+    display:none;
+    margin-top: -4px;
+  } /* WHAT THE FUCK, CAN YOU DO SOMETHING ABOUT THIS? */
+  
+  
+  
+  
+  /* Next & previous buttons from slider */
+  .prev, .next {
+    cursor: pointer;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    position: absolute;
+    margin-top: 480px;/*557*/
+    top: 25px;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.6);
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+ /* Estilo geral */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#row {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product-item {
+  width: calc(20% - 10px);
+  margin-bottom: 50px;
+  position: relative;
+  transition: transform 0.3s;
+  width: 300px; /* Ajuste conforme necessário */
+  height: 500px; /* Altura fixa */
+  padding: 10px; /* Espaço interno */
+}
+
+.product-name {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  color: white;
+  padding: 5px;
+  margin: 0;
+  transition: bottom 0.3s ease-in-out;
+  color: white; /* Substitua pela cor desejada */
+}
+
+
+.product-info {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.product-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10%;
+  overflow: hidden;
+  transition: transform 0.3s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-actions {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.product-item:hover .product-actions {
+  opacity: 1;
+}
+
+.product-button {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+
+  
+  #headr{
+    text-align: center;
+    font-size: 23px;
+    font-family:  Verdana
+  , Arial, sans-serif;
+    padding-top: 48px;
+    padding-bottom: 32px;
+    margin-bottom: 0px;
+  }
+
+  .column{
+    padding: 22.3px;
+  }
+  .tts{
+    text-align: center;
+    font-size: 20px;
+  }
+  .price{
+    font-size: 15px;
+    text-align: center;
+  }
+  .content, .bbutton{
+    cursor: pointer;
+    font-family: Verdana, sans-serif;
+  
+  }
+
+  .emprice{
+    font-size: 16px;
+  }
+  
+  .ha{
+    position: relative;
+    left: 308px;
+    bottom: 32px;
+    border: solid 2px white;
+    background-color: white;
+    padding: 2px;
+    color: red;
+    cursor: pointer;
+  }
+
+  .ha:hover{
+    color:black;
+  } 
+  
+  /*fixing bugs and stuff */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /*change media queries */
+  
+  /* Extra small devices (phones, 600px and down) */
+  
+  @media only screen and (max-width: 600px) {
+    .header 
+    {
+      font-size: 22px;
+      padding: 0px
+    }
+
+    #fst, #scd{
+      display: none;
+    }
+    #home{
+      font-size: 8px;
+    }
+    .btn-group{
+      display: none;
+    }
+  } 
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    
+    
+  } 
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    
+  } 
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    
+  } 
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    
+  }
+  
+  
+  /* topnav's media query*/
+  /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+  @media screen and (max-width: 600px) {
+    .topnav a, .topnav input[type=text] {
+      float: none;
+      display: block;
+      text-align: left;
+      margin: 0;
+      padding: 14px;
+    }
+    .topnav input[type=text] {
+      border: 1px solid #ccc;
+    }
+  }
+  #sr {
+    display: flex; /* Usar flexbox para alinhar os elementos horizontalmente */
+    align-items: center; /* Centralizar os elementos verticalmente */
+  }
+  
+  #txt {
+    flex: 1; /* Ocupar o espaço restante disponível no contêiner */
+    padding: 8px; /* Adicionar espaçamento para melhor aparência */
+  }
+  
+  #search {
+    background-color: #030303; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remover borda do botão */
+    padding: 10px; /* Adicionar espaçamento para melhor aparência */
+    cursor: pointer; /* Mostrar o cursor de mão ao passar o mouse sobre o botão */
+  }
+  
+/* Estilo dos botões sociais */
+#social-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  text-decoration: none;
+  margin: 0 10px;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.social-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Cor da borda escura */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.social-button:hover {
+  transform: scale(1.1);
+}
+
+.social-button:hover::before {
+  opacity: 1;
+}
+
+.instagram {
+  background-color: #e4405f; /* Cor do Instagram */
+}
+
+.whatsapp {
+  background-color: #25D366; /* Cor do WhatsApp */
+}
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+}
+.slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.slides {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  max-width: 100%;
+  height: auto;
+}
+
+.manual-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.manual-btn {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+/* Estilos gerais para o site */
+/* ... */
+
+/* Estilização do rodapé preto */
+.black-footer {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  height: 500px;
+  padding-bottom: 0; /* Remover padding inferior */
+  background-color: black; /* Definir a cor de fundo preta */
+  color: white; /* Definir a cor do texto como branco */
+  text-align: center; /* Centralizar o conteúdo */
+}
+
+/* Estilos para os botões sociais */
+.black-footer .social-button {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+/* Estilos para o formulário de newsletter */
+.black-footer #newsletter {
+  color: white;
+  text-align: center;
+}
+
+/* Estilos para o botão de seguir no formulário */
+.black-footer #email {
+  background-color: rgb(252, 252, 252);
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: 'Tiffany';
+  src: url('../fontes/Tiffany.ttf') format('truetype');
+}
+
+.product-description {
+  font-family: "Tiffany", sans-serif; /* Use a fonte Tiffany e, se não disponível, uma fonte genérica sans-serif */
+  font-size: 17px;
+  margin: 10px;
+  font-weight: 800; /* Corrija o valor da espessura da fonte (deve ser um valor numérico) */
+  letter-spacing: 5px;
+}
+
+.product-description .spacer {
+  flex-grow: 5; /* Ocupa o espaço disponível e empurra o botão para a direita */
+}

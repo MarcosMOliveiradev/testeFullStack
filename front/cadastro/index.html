@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="google-signin-client_id" content="SEU_CLIENT_ID_DO_GOOGLE">
+  <title>Ormeggi: Sign up</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+  <div class="login-root">
+    <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
+      <div class="loginbackground box-background--white padding-top--64">
+        <div class="loginbackground-gridContainer">
+          <div class="box-root flex-flex" style="grid-area: top / start / 8 / end;">
+            <div class="box-root" style="background-image: linear-gradient(white 0%, rgb(247, 250, 252) 33%); flex-grow: 1;"></div>
+          </div>
+          <div class="box-root flex-flex" style="grid-area: 4 / 2 / auto / 5;">
+            <div class="box-root box-divider--light-all-2 animationLeftRight tans3s" style="flex-grow: 1;"></div>
+          </div>
+          <div class="box-root flex-flex" style="grid-area: 6 / start / auto / 2;">
+            <div class="box-root box-background--blue800" style="flex-grow: 1;"></div>
+          </div>
+          <div class="box-root flex-flex" style="grid-area: 7 / start / auto / 4;">
+            <div class="box-root box-background--blue animationLeftRight" style="flex-grow: 1;"></div>
+          </div>
+          <div class="box-root flex-flex" style="grid-area: 8 / 4 / auto / 6;">
+            <div class="box-root box-background--gray100 animationLeftRight tans3s" style="flex-grow: 1;"></div>
+          </div>
+          <div class="box-root flex-flex" style="grid-area: 2 / 15 / auto / end;">
+            <div class="box-root box-background--cyan200 animationRightLeft tans4s" style="flex-grow: 1;"></div>
+          </div>
+          <div class="box-root flex-flex" style="grid-area: 3 / 14 / auto / end;">
+            <div class="box-root box-background--blue animationRightLeft" style="flex-grow: 1;"></div>
+          </div>
+          <div class="box-root flex-flex" style="grid-area: 4 / 17 / auto / 20;">
+            <div class="box-root box-background--gray100 animationRightLeft tans4s" style="flex-grow: 1;"></div>
+          </div>
+          <div class="box-root flex-flex" style="grid-area: 5 / 14 / auto / 17;">
+            <div class="box-root box-divider--light-all-2 animationRightLeft tans3s" style="flex-grow: 1;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+        <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+          <h1><a href="../layout/index.html">Ormeggi</a></h1>
+        </div>
+        <div class="formbg-outer">
+          <div class="formbg">
+            <div class="formbg-inner padding-horizontal--48">
+              <span class="padding-bottom--15">Cadastre-se com seus dados</span>
+              <form id="stripe-login">
+                <div class="field padding-bottom--24">
+                  <label for="username">Username</label>
+                  <input type="text" name="username">
+                </div>
+                <div class="field padding-bottom--24">
+                  <label for="email">Email</label>
+                  <input type="email" name="email">
+                </div>
+                <div class="field padding-bottom--24">
+                  <div class="grid--50-50">
+                    <label for="password">Senha</label>
+                    <div class="reset-pass">
+                      <!-- Aqui você pode adicionar um link para "Esqueceu a senha?" se desejar -->
+                    </div>
+                  </div>
+                  <input type="password" name="password">
+                </div>
+                <div class="field padding-bottom--24">
+                  <label for="confirm-password">Confirme sua senha</label>
+                  <input type="password" name="confirm-password">
+                </div>
+
+                <!-- Botão 2FA -->
+                <div class="field padding-bottom--24">
+                  <button class="btn-2fa" onclick="start2FA()">
+                    <span class="text">2captcha</span>
+                    <div class="loader" id="loader"></div>
+                    <div class="checkmark" id="checkmark">✓</div>
+                  </button>
+                </div>
+
+                <div class="field field-checkbox padding-bottom--24 flex-flex align-center">
+                  <label for="checkbox">
+                    <input type="checkbox" name="checkbox"> Continue conectado
+                  </label>
+                </div>
+                <div class="field padding-bottom--24">
+                  <input type="submit" name="submit" value="Continuar">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="footer-link padding-top--24">
+            <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
+              <span><a href="#">© Ormeggi</a></span>
+              <span><a href="#">Contact</a></span>
+              <span><a href="#">Privacy & terms</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src="./scripts/app.js"></script>
+
+  <!-- Adicione o script da função start2FA() -->
+  <script>
+    function start2FA() {
+      var loader = document.getElementById("loader");
+      var checkmark = document.getElementById("checkmark");
+      var button = document.querySelector(".btn-2fa");
+      var submitButton = document.querySelector(".submit-button");
+
+      // Desabilitar o botão durante o carregamento
+      button.disabled = true;
+
+      // Ocultar o texto do botão e mostrar a bolinha de progresso
+      button.querySelector(".text").style.display = "none";
+      loader.style.display = "inline-block";
+
+      // Simulando um tempo de carregamento
+      setTimeout(function() {
+        // Ocultar a bolinha de progresso e mostrar o ícone de check
+        loader.style.display = "none";
+        checkmark.style.display = "inline-block";
+
+        // Habilitar o botão de cadastro após o 2captcha ser confirmado
+        submitButton.disabled = false;
+      }, 2000); // Tempo de carregamento (2 segundos neste exemplo)
+    }
+
+    // Função para enviar os dados do formulário para o servidor
+    document.getElementById('stripe-login').addEventListener('submit', function(event) {
+      event.preventDefault(); // Impede o envio padrão do formulário
+
+      const form = event.target;
+      const formData = new FormData(form);
+      const username = formData.get("username")
+      const email = formData.get("email")
+      const password = formData.get("password")
+      const confirm_password = formData.get("confirm-password")
+
+      const userData = {
+        username: username,
+        email: email,
+        password: password,
+        confirm_password: confirm_password
+      }
+
+      // Envia os dados do formulário para o servidor usando a Fetch API
+      fetch('http://localhost:27017/api/register', {
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userData),
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Exibir mensagem de sucesso
+        const successMessage = document.createElement('p');
+        successMessage.textContent = 'Cadastro realizado com sucesso!';
+        form.appendChild(successMessage);
+
+        // Habilitar o botão de acesso à página principal
+        const accessButton = document.createElement('button');
+        accessButton.textContent = 'Acessar página principal';
+        accessButton.addEventListener('click', function() {
+          window.location.href = '../layout/index.html'; // Redirecionar para a página principal (layout)
+        });
+        form.appendChild(accessButton);
+      })
+      .catch(error => {
+        // Exibir mensagem de erro (se houver)
+        console.error('Erro ao cadastrar:', error);
+      });
+    });
+  </script>
+    <script src="signup.js"></script>
+</div>
+</div>
+</body>
+</html>

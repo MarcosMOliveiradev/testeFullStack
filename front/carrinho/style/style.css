@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.table {
+    width: 100%;
+}
+
+.well {
+    padding: 20px;
+}
+
+.page-header {
+    margin-top: 0;
+}
+
+.parcelamento {
+    margin-bottom: 20px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+thead th {
+    background-color: #f0f0f0;
+}
+
+tfoot td {
+    text-align: right;
+    font-weight: bold;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+}
+
+.btn:hover {
+    background-color: #c0392b;
+}
+
+.hidden {
+    display: none;
+}
+
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 999;
+}
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* Estilos para a seção de pagamento */
+.payment-options {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente os elementos */
+    align-items: flex-start; /* Alinha os elementos no topo */
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+.boxer {
+    margin: 0 10px; /* Espaçamento horizontal entre as opções de pagamento */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente os elementos dentro de cada opção de pagamento */
+}
+
+/* Estilos para a caixa de pagamento */
+.box1 {
+    margin-bottom: 10px; /* Espaçamento entre a imagem e o texto */
+}
+
+/* Estilos para o texto de pagamento */
+.box2 {
+    font-size: 12pt;
+    text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+/* Estilos para o subtítulo de pagamento */
+.box2 span {
+    font-size: 8pt;
+}

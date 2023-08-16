@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="style/style.css">
+<body>
+    <div class="loading-container">
+        <div class="loader"></div>
+    </div>
+
+    <div class="container hidden">
+        <div class="well">
+            <h2 class="page-header">Carrinho de Compras</h2>
+            <div class="parcelamento">
+                <label for="parcelas">Parcelamento:</label>
+                <select id="parcelas">
+                    <option value="1">1x</option>
+                    <option value="2">2x</option>
+                    <option value="3">3x</option>
+                </select>
+            </div>
+            <table class="table table-striped table-responsive">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantidade</th>
+                        <th>Tamanho</th>
+                        <th>Cor</th>
+                        <th style="width: 150px;">Valor</th>
+                        <th style="width: 150px;">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="existing-product">
+                        <td class="product-name">Blusa Moletom</td>
+                        <td class="product-quantity">
+                            <input type="number" class="quantidade" value="1" min="1" max="999">
+                        </td>
+                        <td class="product-size">
+                            <select class="tamanho">
+                                <option value="P">P</option>
+                                <option value="M">M</option>
+                                <option value="G">G</option>
+                                <option value="GG">GG</option>
+                            </select>
+                        </td>
+                        <td class="product-color">
+                            <select class="cor">
+                                <option value="Areia">Areia</option>
+                                <option value="Cinza">Cinza</option>
+                                <option value="Lilás">Lilás</option>
+                                <option value="Azul">Azul</option>
+                                <option value="Preto">Preto</option>
+                            </select>
+                        </td>
+                        <td class="product-value" data-product-value="79.90">79,90</td>
+                        <td>
+                            <button class="product-button btn btn-danger">Remover</button>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4" class="text-right">Valor Total:</td>
+                        <td colspan="2">
+                            <strong><span id="valorTotal">0.00</span></strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="text-right">Valor de cada parcela com juros:</td>
+                        <td colspan="2">
+                            <strong><span class="valorParcela">0.00</span></strong>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    
+    <!-- Opções de Pagamento -->
+    <div class="payment-options">
+        <div class="boxer">
+            <div class="box-row">
+                <div id="over" class="box1">
+                    <a href="#"><img class="wp-image-8300 aligncenter" src="https://newsite.directcall.com.br/wp-content/uploads/2022/02/credit-card.png" alt="" width="45" height="45" /></a>
+                </div>
+                <div class="box2">
+                    <span style="font-size: 12pt;"><strong>Cartão de Crédito<br></strong></span>
+                    <span style="font-size: 8pt;">Seu pagamento será aprovado na hora.</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="boxer">
+            <div class="box-row">
+                <div id="over" class="box1">
+                    <a href="#"><img class="wp-image-8300 aligncenter" src="https://newsite.directcall.com.br/wp-content/uploads/2022/02/boleto.png" alt="" width="45" height="45" /></a>
+                </div>
+                <div class="box2">
+                    <span style="font-size: 12pt;"><strong>Boleto Bancário<br></strong></span>
+                    <span style="font-size: 8pt;">Seu pagamento aprovado em até 48hrs.</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="boxer">
+            <div class="box-row">
+                <div id="over" class="box1">
+                    <a href="#"><img class="wp-image-8300 aligncenter" src="https://newsite.directcall.com.br/wp-content/uploads/2022/02/pix.png" alt="" width="45" height="45" /></a>
+                </div>
+                <div class="box2">
+                    <span style="font-size: 12pt;"><strong>PIX<br></strong></span>
+                    <span style="font-size: 8pt;">Seu pagamento será aprovado na hora.</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="boxer">
+            <div class="box-row">
+                <div id="over" class="box1">
+                    <a href="#"><img class="wp-image-8300 aligncenter" src="https://newsite.directcall.com.br/wp-content/uploads/2022/02/credit-card.png" alt="" width="45" height="45" /></a>
+                </div>
+                <div class="box2">
+                    <span style="font-size: 12pt;"><strong>Cartão de Débito<br></strong></span>
+                    <span style="font-size: 8pt;">Pagamento direto da sua conta bancária.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="scripts/app.js"></script>
+</body>
+</html>

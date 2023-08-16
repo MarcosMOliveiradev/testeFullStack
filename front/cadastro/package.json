@@ -1,0 +1,11 @@
+{
+  "name": "cadastro",
+  "version": "1.0.0",
+  "description": "sistema de cadastro para Ormeggi",
+  "main": "app.js",
+  "scripts": {
+    "test": "start"
+  },
+  "author": "japoneslofy",
+  "license": "ISC"
+}
