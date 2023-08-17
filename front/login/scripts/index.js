@@ -13,14 +13,13 @@ loginButton.addEventListener('click', async () => {
       body: JSON.stringify({ email, password }),
     })
     if (response.ok) {
-      const data = await response.json()
-      const token = data.token
+      const token = await response.json()
       localStorage.setItem('token', token)
       window.location.href = '../layout/index.html'
     } else {
       alert('Loguin ou senha invalido', response.status, response.text)
     }
   } catch (err) {
-    alert('Erro ao fazer login', err)
+    console.error('Erro ao fazer login', err)
   }
 })

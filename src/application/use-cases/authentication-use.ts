@@ -21,7 +21,7 @@ export class AuthenticationUser {
 
     const authentication = await this.userRpository.auth(email)
 
-    const passwordHash = compare(password, authentication.password)
+    const passwordHash = await compare(password, authentication.password)
 
     if (!passwordHash) {
       throw new Error('Senha ou E-mail Incorreta')

@@ -16,6 +16,13 @@ body{
     font-weight: bold; 
     
   }
+  /* login*/
+  .login{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
   /* buttons */
   .btn-group button {
     background-color: #000001;

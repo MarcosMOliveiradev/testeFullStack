@@ -6,7 +6,7 @@ import { AuthenticationUserControler } from '../controllers/Register-user-contro
 import { AuthenticationUser } from '../../application/use-cases/authentication-use'
 import { UpdateUser } from '../../application/use-cases/update-use'
 import { UpdateUserController } from '../controllers/Update-user-controller'
-import { verify } from '../../middlewares/jwtVerify'
+// import { verify } from '../../middlewares/jwtVerify'
 
 // repositorio
 const repository = new PrismaUserRepository()
@@ -31,7 +31,10 @@ export async function usuario(app: FastifyInstance) {
     return login.authenticate(request, reply, app)
   })
 
-  app.put('/redefinir/:_email', { preHandler: [verify] }, async (request) => {
-    return updateCrontroller.update(request)
-  })
+  app.put(
+    '/redefinir/:_email',
+    /* { preHandler: [verify] }, */ async (request) => {
+      return updateCrontroller.update(request)
+    },
+  )
 }
