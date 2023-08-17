@@ -48,14 +48,14 @@
           <div class="formbg">
             <div class="formbg-inner padding-horizontal--48">
               <span class="padding-bottom--15">Cadastre-se com seus dados</span>
-              <form id="stripe-login">
+              <!-- <form id="stripe-login"> -->
                 <div class="field padding-bottom--24">
                   <label for="username">Username</label>
-                  <input type="text" name="username">
+                  <input type="text" name="username" id="name">
                 </div>
                 <div class="field padding-bottom--24">
                   <label for="email">Email</label>
-                  <input type="email" name="email">
+                  <input type="email" name="email" id="email">
                 </div>
                 <div class="field padding-bottom--24">
                   <div class="grid--50-50">
@@ -64,11 +64,11 @@
                       <!-- Aqui você pode adicionar um link para "Esqueceu a senha?" se desejar -->
                     </div>
                   </div>
-                  <input type="password" name="password">
+                  <input type="password" name="password" id="password">
                 </div>
                 <div class="field padding-bottom--24">
                   <label for="confirm-password">Confirme sua senha</label>
-                  <input type="password" name="confirm-password">
+                  <input type="password" name="confirm-password" id="confirm-password">
                 </div>
 
                 <!-- Botão 2FA -->
@@ -86,9 +86,9 @@
                   </label>
                 </div>
                 <div class="field padding-bottom--24">
-                  <input type="submit" name="submit" value="Continuar">
+                  <input type="submit" name="submit" value="Continuar" id="registerButton">
                 </div>
-              </form>
+              <!-- </form> -->
             </div>
           </div>
           <div class="footer-link padding-top--24">
@@ -103,10 +103,11 @@
     </div>
   </div>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <script src="./scripts/app.js"></script>
+  <!-- <script src="./scripts/app.js"></script> -->
 
+  <script src="./scripts/index.js" async defer></script>
   <!-- Adicione o script da função start2FA() -->
-  <script>
+  <!-- <script>
     function start2FA() {
       var loader = document.getElementById("loader");
       var checkmark = document.getElementById("checkmark");
@@ -178,7 +179,7 @@
       });
     });
   </script>
-    <script src="signup.js"></script>
+    <script src="signup.js"></script> -->
 </div>
 </div>
 </body>

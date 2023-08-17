@@ -1,4 +1,4 @@
-import { FastifyRequest, FastifyInstance } from 'fastify'
+import { FastifyRequest, FastifyInstance, FastifyReply } from 'fastify'
 import { z } from 'zod'
 
 import { AuthenticationUser } from '../../application/use-cases/authentication-use'
@@ -8,7 +8,11 @@ export class AuthenticationUserControler {
     Promise<void>
   }
 
-  async authenticate(request: FastifyRequest, app: FastifyInstance) {
+  async authenticate(
+    request: FastifyRequest,
+    reply: FastifyReply,
+    app: FastifyInstance,
+  ) {
     const userSchema = z.object({
       email: z.string(),
       password: z.string(),
@@ -18,6 +22,6 @@ export class AuthenticationUserControler {
 
     const { token } = await this.authenticateUser.auth({ email, password }, app)
 
-    return token
+    return reply.send(JSON.stringify(token))
   }
 }

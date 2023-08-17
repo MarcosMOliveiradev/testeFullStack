@@ -21,10 +21,10 @@
           <div class="formbg">
             <div class="formbg-inner padding-horizontal--48">
               <span class="padding-bottom--15">Faça login em sua conta</span>
-              <form id="stripe-login">
+              <!-- <form id="stripe-login"> -->
                 <div class="field padding-bottom--24">
                   <label for="email">Email</label>
-                  <input type="email" name="email">
+                  <input type="email" name="email" id="email">
                 </div>
                 <div class="field padding-bottom--24">
                   <div class="grid--50-50">
@@ -33,7 +33,7 @@
                       <a href="#">Esqueceu a senha?</a>
                     </div>
                   </div>
-                  <input type="password" name="password">
+                  <input type="password" name="password"  id="password">
                 </div>
                 <div class="field field-checkbox padding-bottom--24 flex-flex align-center">
                   <label for="checkbox">
@@ -41,9 +41,9 @@
                   </label>
                 </div>
                 <div class="field padding-bottom--24">
-                  <input type="submit" name="submit" value="Continue">
+                  <input type="submit" name="submit" id="loginButton" value="Continue">
                 </div>
-              </form>
+              <!-- </form> -->
             </div>
           </div>
           <div class="footer-link padding-top--24">
@@ -58,5 +58,7 @@
       </div>
     </div>
   </div>
+
+  <script src="./scripts/index.js" async defer></script>
 </body>
 </html>
